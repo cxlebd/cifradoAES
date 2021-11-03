@@ -5,30 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cifrados</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
-    <div class="container">
-        <div class="aes">
-            <h2>Cifrado AES</h2>
-            <form autocomplete="off" >
+    <div class="bg-red-400 w-screen p-2 text-white">
+        <h2>Cifrado AES</h2>
+    </div>            
+    <div class="m-2">        
+        <form autocomplete="off" class="grid ">
+            <div>
                 <label>Mensaje:</label>
-                <input type="text" placeholder="Mensaje original" id="mensaje">
+                <input type="text" placeholder="Mensaje original" id="mensaje" class="p-1 border-b-2 border-gray-400">            
+            </div>
+            <div>
                 <label>Clave:</label>
-                <input type="text" placeholder="Clave" id="clave">
-                <br>
-                <label>Mensaje cifrado:</label>
-                <br>
-                <textarea id="cifrado" cols="100"></textarea>
-                <br>
-                <label>Mensaje cifrado con formato de cadena:</label>
-                <br>
-                <textarea id="cifrado-cadena" cols="100"></textarea>
-                <br>
-                <button type="submit" id="cifrar-aes">Cifrar</button>
-                <button type="submit" id="descifrar-aes">Descifrar</button>
-            </form>
-        </div>
+                <input type="text" placeholder="Clave" id="clave" class="p-1 border-b-2 border-gray-400">
+            </div>
+            <div>
+                <label>Mensaje cifrado:</label><br>
+                <textarea id="cifrado" cols="100" class="max-w-xs h-auto border-t-2 border-gray-400"></textarea>            
+            </div>
+            <div>
+                <label>Mensaje cifrado con formato de cadena:</label><br>
+                <textarea id="cifrado-cadena" cols="100" class="max-w-xs h-auto border-t-2 border-gray-400"></textarea>
+            </div>            
+            <div>
+                <button type="submit" id="cifrar-aes" class="p-1.5 bg-green-400 rounded">Cifrar</button>
+                <button type="submit" id="descifrar-aes" class="p-1.5 bg-pink-400 rounded">Descifrar</button>
+            </div>
+        </form>
     </div>
     <script src="./js/script.js"></script>
 </body>
